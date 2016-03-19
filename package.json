@@ -39,7 +39,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/matthewwithanm/react-controllables.git"
+    "url": "git://github.com/captainill/react-controllables.git"
   },
   "keywords": [
     "react-component",
