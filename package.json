@@ -1,6 +1,6 @@
 {
   "name": "@oiok/react-controllables",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "Easily create controllable components",
   "main": "./lib/index.js",
   "directories": {
