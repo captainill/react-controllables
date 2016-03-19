@@ -28,15 +28,15 @@ gulp.task('build:node', () => {
     .pipe(gulp.dest('./lib', {overwrite: true}));
 });
 
-gulp.task('build:browser', ['build:node'], () => {
-  gulp.src('./lib/standalone.js')
-    .pipe(browserify({
-      standalone: 'Controllables',
-      transform: ['browserify-shim'],
-    }))
-    .pipe(rename('react-controllables.js'))
-    .pipe(gulp.dest('./standalone/', {overwrite: true}));
-});
+// gulp.task('build:browser', ['build:node'], () => {
+//   gulp.src('./lib/standalone.js')
+//     .pipe(browserify({
+//       standalone: 'Controllables',
+//       transform: ['browserify-shim'],
+//     }))
+//     .pipe(rename('react-controllables.js'))
+//     .pipe(gulp.dest('./standalone/', {overwrite: true}));
+// });
 
 gulp.task('build:tests', () => {
   gulp.src(['./test/tests**.js', '!**/*-compiled.js'])
@@ -59,4 +59,5 @@ gulp.task('testserver', connect.server({
 
 gulp.task('test', ['build:browser', 'build:tests', 'testserver']);
 
-gulp.task('build', ['build:node', 'build:browser']);
+// gulp.task('build', ['build:node', 'build:browser']);
+gulp.task('build', ['build:node']);
